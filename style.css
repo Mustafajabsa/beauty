@@ -190,9 +190,7 @@ a{
 .search-btn:hover{
     width: 280px;
 }
-
-
-/*=======NAV===========*/
+/*======= NAV ===========*/
 .l-header{
     width: 100%;
     height: var(--header-height);
@@ -203,13 +201,13 @@ a{
     z-index: 999999;
 }
 .navbar{
-    justify-content: space-between;
     padding: 20px;
 }
 .nav__toggle{
     position: relative;
     font-size: var(--h1-font-size);
     padding: 5px 5px 0;
+    left: 100px;
 
 }
 .nav__toggle:hover{
@@ -224,10 +222,10 @@ a{
     height: 135px;
     width: 135px;
 }
-/*===============MEDIA GUERY NAVBAR==============*/
+/*===============MEDIA QUERY NAVBAR==============*/
 @media (max-width: 960px){
     .nav{
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         width: 0;
@@ -243,7 +241,7 @@ a{
         padding: 15px 0;
     }
     .show-menu{
-        width: 45%;
+        width: 100%;
     }
 }
 /*============ USER =============*/
@@ -287,10 +285,10 @@ a{
 .nav__link:hover{
     color: var(--first-color);
 }
-
+/*================ HERO SECTION =============*/
 .hero{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: var(--main-color);
     border-radius: 0 0 300px 0;
 }
@@ -682,6 +680,13 @@ a{
         transform: translateX(300px) rotate(0deg);
     }
 }
+@media (max-width: 960px){
+    .nav__toggle{
+        position: absolute;
+        top: 20px;
+        left: 90%;
+    }
+}
 @media (min-width: 960px){
     .nav__menu{
         display: flex;
@@ -726,4 +731,50 @@ a{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
+}
+/*================ SAMLL SCREEN MEDIA ===============*/
+@media (max-width: 700px){
+    .testimonials__card{
+        width: 100%;
+    }
+    .products__content__description{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav__link{
+        font-size: small;
+        font-weight: var(--font-bold);
+        text-transform: capitalize;
+        color: var(--black-color);
+        transition: all 400ms ease;
+        position: relative;
+    }
+    .hero .hero__img{
+        display: none;
+    }
+    .hero__content{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero__content h1{
+        font-family: var(--font-cursive);
+        font-size: 30px;
+        text-align: center;
+        line-height: calc(var(--big-font-size) + 30px);
+        letter-spacing: 0.1em;
+        color: var(--first-color);
+        margin-bottom: var(--mb-1-5);
+    }
+    .hero__content p{
+        font-weight: var(--font-medium);
+        text-align: center;
+        line-height: calc(var(--normal-font-size) + 30px);
+        padding: 0 3rem;
+        letter-spacing: 0.2em;
+        color: var(--black-color);
+        margin-bottom: var(--mb-1-5); 
+    }
+
 }
