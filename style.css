@@ -684,7 +684,7 @@ a{
     .nav__toggle{
         position: absolute;
         top: 20px;
-        left: 90%;
+        left: 80%;
     }
 }
 @media (min-width: 960px){
