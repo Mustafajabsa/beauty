@@ -40,3 +40,15 @@ function scrollHeader(){
 
 }
 window.addEventListener('scroll', scrollHeader)
+
+
+/*============ Signin / SignUp ===================*/
+
+let  signupBtn = document.getElementById("signupBtn");
+let  nameField = document.getElementById("nameField");
+let  signinBtn = document.getElementById("signinBtn");
+let  title = document.getElementById("title");
+
+signinBtn.onclick = function(){
+    nameField.style.maxHeight = "0";
+}
